@@ -1,0 +1,116 @@
+/*-------------------------------------------------------*/
+/*------  @media screen and (max-width: 991px -----------*/
+/*-------                                       ---------*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 991px){
+  .search-bg__title {
+      font-size: 33px;
+  }
+  .search-bg .search-bg__text {
+    max-width: 550px;
+  }
+  .content-box-text {
+    position: relative;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+  }
+  ul.aboutMoonCode li{
+    width: 100%;
+  }
+  .text-footer{
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+/*-------------------------------------------------------*/
+/*------  @media screen and (max-width: 767px -----------*/
+/*-------                                       ---------*/
+/*-------------------------------------------------------*/
+@media screen and (max-width: 767px){
+  .navbar-nav{
+  	margin-right:0 !important;
+  }
+  .navbar-brand{
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+  }
+  .search-bg__title {
+    font-size: 28px;
+  }
+  .search-bg {
+    padding-top: 30px;
+    margin-bottom: 60px;
+  }
+  .search-bg__text {
+    width: 430px;
+  }
+  .search-bg__btn {
+    padding: 12px 45px;
+  }
+  ul.aboutMoonCode li{
+    width: 100%;
+  }
+  .course-box .course-img img{
+  	width: 100%;
+  }
+  .course-box .course-price {
+    -webkit-transform: translateX(718px);
+    -moz-transform: translateX(718px);
+    -o-transform: translateX(718px);
+    transform: translateX(718px);
+  }
+}
+/*-------------------------------------------------------*/
+/*------  @media screen and (max-width: 640px -----------*/
+/*-------                                       ---------*/
+/*-------------------------------------------------------*/
+@media only screen and (max-width: 640px){
+		.owl-carousel.owl-option-02 {
+		padding: 0;
+	}
+	.owl-carousel.owl-option-02 .owl-nav {
+		padding-top: 30px;
+	}
+	.owl-carousel.owl-option-02 .owl-prev {
+		position: static;
+		margin: 0;
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+		margin: 0 10px;
+	}
+
+	.owl-carousel.owl-option-02 .owl-next {
+		position: static;
+		margin: 0;
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+		margin: 0 10px;
+	}
+  .search-bg .search-bg__text{
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-border-radius: 22px;
+    border-radius: 22px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .search-bg__btn{
+    -webkit-border-radius: 25px;
+     border-radius: 25px;
+  }
+  .course-landing .nav>li>a{
+    padding: 15px 1px;
+
+  }
+
+}
+@media only screen and (max-width: 552px){
+  .custom-feature-box .feature-box-info > strong {
+    font-size: 1.4em;
+
+  }
+}

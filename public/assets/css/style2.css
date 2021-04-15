@@ -1,0 +1,14 @@
+.item img{
+	width: 99px;
+	height: 99px;
+}
+.carousel-control.left,
+.carousel-control.right{
+	background-image: none !important;
+}
+.carousel-control.left{
+	left: -71px !important;
+}
+.carousel-control.right {
+    right: -71px!important;
+}

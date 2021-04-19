@@ -1489,3 +1489,9 @@ html .heading-light, html .lnk-light, html .text-color-light {
 	}
 	
    /* End Style Contact*/
+   body{
+	overflow: auto !important; 
+
+    position: static !important;
+
+}

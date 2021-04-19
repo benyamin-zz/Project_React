@@ -34,7 +34,7 @@ const Login = (props) => {
     e.preventDefault();
     
     if (validator.current.allValid()) {
-
+      
       dispatch(login(user, show));
     } else {
       validator.current.showMessages();

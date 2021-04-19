@@ -86,7 +86,7 @@ const MainNav = () => {
                     </a>
                     </li>
                 </ul>
-                <div className="loginregButton pull-left">
+                {/* <div className="loginregButton pull-left">
                     <a href="#" className="btn  btn-login ">
                     ورود
                     </a>
@@ -99,7 +99,7 @@ const MainNav = () => {
                     <span className="circle-item">
                     <span className="border-item"></span>
                     </span>
-                </div>
+                </div> */}
                 </div>
             </div>
             </nav>

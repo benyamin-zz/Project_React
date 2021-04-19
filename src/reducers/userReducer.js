@@ -1,15 +1,15 @@
 
 const INTIAL_STATE = {
     isSigned:null,
-    token:null,
+    infoUser:null,
     loading:false
 };
 export default (state=INTIAL_STATE, action)=>{
     switch (action.type) {
         case "LOGIN":
-            return {...state,isSigned:true, token:action.payload,loading:false}
+            return {...state,isSigned:true, infoUser:action.payload,loading:false}
             case "LOGOUT":
-                return {...state,isSigned:false, token:null,loading:false}
+                return {...state,isSigned:false, infoUser:null,loading:false}
         default:
             return state;
     }

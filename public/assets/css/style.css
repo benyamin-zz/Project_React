@@ -20,6 +20,41 @@ body{
 	font-weight: normal;
 
 }
+.user-avatar{
+	float: left;
+}
+.user-avatar a{
+	color: #0719bc;
+    font-weight: bold;
+}
+.navbar-nav>li>.dropdown-menu{
+	padding: 0;
+}
+.user-avatar .dropdown-menu>li{
+	padding: 10px 8px;
+}
+.user-avatar .dropdown-menu>:hover{
+	background-color: #4d9db4;
+}
+.user-avatar .dropdown-menu>li>a{
+	padding: 0;
+}
+.user-avatar .dropdown-menu .divider{
+margin: 0;
+padding: 0;
+}
+.user-avatar .dropdown-menu>li>a:hover {
+  
+    background-color: transparent;
+	color: #FFF;
+}
+.user-avatar a:hover{
+	text-decoration: none;
+    background-color: #ffffff;
+    color: #4a95b2;
+	border-radius: 5px;
+
+}
 /*Start Style The Index*/
 
 /* Start Style headerWrapper*/

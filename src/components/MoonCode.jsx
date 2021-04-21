@@ -1,15 +1,19 @@
 import React, { Fragment, useEffect } from "react";
 import { Route, Switch } from "react-router";
-import Course from "../Course/Course";
+import Course from "./Course/Course";
 import MainLayout from "./Layouts/MainLayout";
 import Login from "./Login/Login";
 import jwt from "jsonwebtoken"
 import Register from "./Register/Register";
 import LogOut from "./Login/LogOut";
+import { useSelector } from "react-redux";
+import { paginate } from "../utils/paginate";
+import ArchiveCourse from "./Course/ArchiveCourse";
 
 
 const MoonCode = () => {
-
+    const courses = useSelector(state => state.courses);
+    const indexCourses = paginate(courses,1,6)
     useEffect(() => {
         const token = localStorage.getItem("token");
 
@@ -25,10 +29,11 @@ const MoonCode = () => {
             <Route path={["/"]} >
                 <MainLayout>
                     <Switch>
-                        <Route path="/" exact component={Course} /> 
+                        <Route path="/" exact render={()=> <Course courses={indexCourses} /> } /> 
                         <Route path="/login" exact component={Login} /> 
                         <Route path="/register" exact component={Register} /> 
                         <Route path="/logOut" exact component={LogOut} /> 
+                        <Route path="/archiveCourse" exact component={ArchiveCourse} /> 
                     </Switch>
                 </MainLayout>
             </Route>

@@ -13,7 +13,6 @@ export const login = (formValues,show)=>{
             const {data,status}= await axios.post("login",JSON.stringify(formValues)) 
             if(status == 200) {
                 const decodeToken = jwt.decode(data.token);
-                console.log(decodeToken.user)
                 dispatch({
                     type: "LOGIN",
                     payload: decodeToken.user

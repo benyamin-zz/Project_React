@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import {store} from "./store"
+import { getAllCourse } from './actions/courses';
 
 
 
@@ -14,5 +15,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
+store.dispatch(getAllCourse())
 reportWebVitals()

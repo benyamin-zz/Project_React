@@ -71,9 +71,9 @@ const MainNav = () => {
                     </ul>
                     </li>
                     <li>
-                    <a href="categories.html">
+                    <Link to="/archiveCourse">
                         <i className="fa fa-clipboard"></i>دوره ها
-                    </a>
+                    </Link>
                     </li>
                     <li>
                     <a href="#">

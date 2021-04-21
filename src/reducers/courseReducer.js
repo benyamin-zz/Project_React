@@ -1,11 +1,10 @@
 import React from 'react';
 
-export default (state=[],action)=>{
+export default (state={},action)=>{
     switch (action.type) {
-        
-        case "All_COURSES":
+        case "GET_COURSE":
             
-            return [...action.payload]
+            return {...action.payload}
 
     
         default:

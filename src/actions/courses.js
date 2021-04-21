@@ -15,3 +15,19 @@ export const getAllCourse = ()=>{
         }
     }
 }
+
+export const getSingleCourse = (courseId)=>{
+    return async (dispatch) => {
+        try {
+            const {data,status} = await axios.get(`course/${courseId}`);
+            if(status === 200) {
+                dispatch({
+                    type: "GET_COURSE",
+                    payload: data.course
+                })
+            }
+        } catch (error) {
+            
+        }
+    }
+}

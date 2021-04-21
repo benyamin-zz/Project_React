@@ -5,9 +5,10 @@ const Pagination = ({ totalCourse, currentPage, prePage, onPageChange }) => {
   if (pageCount === 1) return null;
   const pages = range(1, pageCount + 1);
   return (
+    
     <div>
       <nav aria-label="Page navigation" className="text-center">
-        <ul class="pagination">
+        <ul className="pagination">
           <li>
 
           </li>

@@ -48,7 +48,7 @@ const Login = (props) => {
       {loading ? (
         <Zoom time={0} color="#fc03d7" customLoading={loading} />
       ) : null}
-      <form className="form-horizontal" onSubmit={handelSubmit}>
+      <form className="form-horizontal formLogin" onSubmit={handelSubmit}>
         <div className="form-group has-feedback">
           <label className="col-sm-2 control-label">ایمیل</label>
           <div className="col-sm-10">

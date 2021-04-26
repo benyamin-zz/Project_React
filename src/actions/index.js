@@ -11,8 +11,9 @@ export const login = (formValues,show)=>{
     return async (dispatch)=>{
         try {
             const {data,status}= await axios.post("login",JSON.stringify(formValues)) 
-            if(status == 200) {
+            if(status === 200) {
                 const decodeToken = jwt.decode(data.token);
+                console.log(decodeToken.user)
                 dispatch({
                     type: "LOGIN",
                     payload: decodeToken.user
@@ -32,7 +33,6 @@ export const login = (formValues,show)=>{
                 position: "top-right",
                 closeOnClick: true,
               });
-            console.log(error)
             show(false);
 
         }

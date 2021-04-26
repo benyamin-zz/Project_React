@@ -47,13 +47,16 @@ const TopNav = () => {
                 </form>
               </div>
             </div>
+
             <div className="col-md-3 ">
               {!isEmpty(token) ? (
                 <ul className="nav navbar-nav user-avatar ">
+                
+                  {decodeToken.user.isAdmin == true ? <li className="dropdown">  <Link to="/dashboard" >داشبورد</Link></li> : ""}
                   <li className="dropdown">
                     
                     <a
-                      href="#"
+                     
                       className="dropdown-toggle"
                       data-toggle="dropdown"
                       role="button"

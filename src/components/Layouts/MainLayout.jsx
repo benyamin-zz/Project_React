@@ -9,7 +9,6 @@ import LoadingBar  from "react-redux-loading-bar";
 
 const MainLayout = (props) => {
  const {pathname} = props.location;
- console.log(pathname)
   return (
     <div>
       <section className="mooncode">

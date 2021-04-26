@@ -8,6 +8,7 @@ export default combineReducers ({
     user : userReducer,
     loadingBar: loadingBarReducer,
     courses:coursesReducer,
-    course:courseReducer
+    course:courseReducer,
+    // crud: coursesReducer
 
 })

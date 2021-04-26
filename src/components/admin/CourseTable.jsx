@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { paginate } from "../../utils/paginate";
 import Pagination from "../Common/Pagination";
 import NewCourse from "./Dialog/NewCourse";
 import EditCourse from "./Dialog/EditCourse";
 import Deletecourse from "./Dialog/Deletecourse";
+import { divide } from "lodash";
 
 const CourseTable = () => {
   const courses = useSelector((state) => state.courses);
   const [currentPage, setCurrentPage] = useState();
   const [currentCourse, setCurrentCourse] = useState({});
+  const [search, setSearch] = useState("");
+  const [courseList,setCourseList] = useState([]);
   const [prePage] = useState(20);
-  const indexCourses = paginate(courses, currentPage, prePage);
+  useEffect(() => {
+    setCourseList(courses)
+
+  }, [])
+
+  const filteredCourses = courseList.filter((course) =>
+  course.title.includes(search)
+);
+
+  const indexCourses = paginate(filteredCourses, currentPage, prePage);
 
   const [showDialogNewCourse, setShowDialogNewCourse] = useState(false);
   const openNewCourse = () => setShowDialogNewCourse(true);
@@ -55,9 +67,9 @@ const CourseTable = () => {
       <button className="btn btn-primary" onClick={openNewCourse}>
         + اضافه کردن دوره جدید
       </button>
-      <form style={{ width: "50%", float: "left", marginLeft: "2em" }}>
-        <input className="form-control" placeholder="جستجو" type="search" />
-      </form>
+      <divide style={{ width: "50%", float: "left", marginLeft: "2em" }}>
+        <input className="form-control" placeholder="جستجو" type="search" onChange={(e)=>setSearch(e.target.value)} />
+      </divide>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>

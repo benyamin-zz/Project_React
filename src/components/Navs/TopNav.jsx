@@ -24,7 +24,7 @@ const TopNav = () => {
           <div className="row">
             <div className="col-md-2 pull-right ">
               <img
-                src="./assets/img/moon.png"
+                src="../assets/img/moon.png"
                 className="img-responsive"
                 alt="Logo Image"
               />
